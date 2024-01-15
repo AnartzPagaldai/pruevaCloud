@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+require "db.php";
 
-<body>
-    <h1>hola could</h1>
-    <a href="/adiios.php">adiios</a>
-</body>
+$error = "";
 
-</html>
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $id = select("SELECT id FROM users WHERE nombre = :nombre AND pass = :pass",
+    ["nombre" => $_POST["nombre"], "pass" => $_POST["pass"]]);
+    if ($id[0]) { 
+        die("iniciado");
+    } else {
+        $error = "incorrecto";
+    }
+}
+
+require "index.view.php";
