@@ -14,6 +14,7 @@
         <input type="text" name="nombre">
         <p>Contraseña</p> 
         <input type="text" name="pass">
+        <input type="submit">
     </form>
     <p><?= $error ?></p>
     <a href="/adios.php">adios</a>
