@@ -4,16 +4,11 @@ $conn = connect();
 function connect()
 {
     global $conn;
-    /*
-    $host = "viaduct.proxy.rlwy.net";
-    $dbname = "railway";
-    $user = "root";
-    $password = "GB6aDEdG1H6bHfFfEhAD3CGd6ga-E21-";
-    */
-    define('DB_HOST', 'viaduct.proxy.rlwy.net:26459');
+
+    define('DB_HOST', 'viaduct.proxy.rlwy.net:19925');
     define('DB_NAME', 'railway');
     define('DB_USER', 'root');
-    define('DB_PASSWORD', 'GB6aDEdG1H6bHfFfEhAD3CGd6ga-E21-');
+    define('DB_PASSWORD', 'D55-34aFF24E5B4A5aHFhBDEf5bffghd');
     
     try {
         $conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
